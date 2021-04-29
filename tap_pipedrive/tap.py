@@ -108,7 +108,7 @@ class PipedriveTap(object):
         RecentOrganizationsStream(),
         RecentPersonsStream(),
         RecentProductsStream(),
-        RecentDeleteLogsStream(),
+       # RecentDeleteLogsStream(), No delete_logs item is supported by API
         DealStageChangeStream(),
         DealsProductsStream()
     ]
@@ -128,26 +128,32 @@ class PipedriveTap(object):
             stream.tap = self
 
             schema = Schema.from_dict(stream.get_schema())
+            replication_method = stream.replication_method
             key_properties = stream.key_properties
+            replication_key = stream.state_field
 
-            metadata = []
+            mdata = metadata.new()
+            mdata = metadata.write(mdata, (), 'table-key-properties', key_properties)
+            mdata = metadata.write(mdata, (), 'forced-replication-method', replication_method)
+
+            if replication_key:
+                mdata = metadata.write(mdata, (), 'valid-replication-keys', replication_key)
+            mdata = metadata.write(mdata, (), 'selected', True)
+
             for prop, json_schema in schema.properties.items():
                 inclusion = 'available'
                 if prop in key_properties or (stream.state_field and prop == stream.state_field):
                     inclusion = 'automatic'
-                metadata.append({
-                    'breadcrumb': ['properties', prop],
-                    'metadata': {
-                        'inclusion': inclusion
-                    }
-                })
+                mdata = metadata.write(mdata, ('properties', prop), 'inclusion', inclusion)
 
             catalog.streams.append(CatalogEntry(
                 stream=stream.schema,
                 tap_stream_id=stream.schema,
                 key_properties=key_properties,
                 schema=schema,
-                metadata=metadata
+                metadata=metadata.to_list(mdata),
+                replication_method=replication_method,
+                replication_key=replication_key
             ))
 
         return catalog
