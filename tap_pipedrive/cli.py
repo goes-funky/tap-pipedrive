@@ -4,7 +4,7 @@ import singer
 import json
 import sys
 from tap_pipedrive.tap import PipedriveTap
-
+from singer.catalog import Catalog
 
 logger = singer.get_logger()
 
@@ -19,8 +19,8 @@ def main():
         json.dump(catalog.to_dict(), sys.stdout, indent=2)
         logger.info('Finished discover')
     else:
-        if args.catalog:
-            catalog = args.catalog
+        if args.properties:
+            catalog = Catalog.from_dict(args.properties)
         else:
             catalog = pipedrive_tap.do_discover()
         pipedrive_tap.do_sync(catalog)

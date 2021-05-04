@@ -108,7 +108,7 @@ class PipedriveTap(object):
         RecentOrganizationsStream(),
         RecentPersonsStream(),
         RecentProductsStream(),
-       # RecentDeleteLogsStream(), No delete_logs item is supported by API
+        # RecentDeleteLogsStream(), No delete_logs item is supported by API
         DealStageChangeStream(),
         DealsProductsStream()
     ]
@@ -134,11 +134,11 @@ class PipedriveTap(object):
 
             mdata = metadata.new()
             mdata = metadata.write(mdata, (), 'table-key-properties', key_properties)
-            mdata = metadata.write(mdata, (), 'forced-replication-method', replication_method)
+            #mdata = metadata.write(mdata, (), 'forced-replication-method', replication_method)
 
             if replication_key:
                 mdata = metadata.write(mdata, (), 'valid-replication-keys', replication_key)
-            mdata = metadata.write(mdata, (), 'selected', True)
+            # mdata = metadata.write(mdata, (), 'selected', True)
 
             for prop, json_schema in schema.properties.items():
                 inclusion = 'available'

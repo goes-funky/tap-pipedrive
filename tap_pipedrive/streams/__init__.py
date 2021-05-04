@@ -17,7 +17,7 @@ from .deal_products import DealsProductsStream
 
 
 __all__ = ['CurrenciesStream', 'ActivityTypesStream', 'FiltersStream', 'StagesStream', 'PipelinesStream',
-           'RecentUsersStream', 'RecentFilesStream', 'RecentDeleteLogsStream'
+           'RecentUsersStream', 'RecentFilesStream', 'RecentDeleteLogsStream',
            'RecentNotesStream', 'RecentActivitiesStream', 'RecentDealsStream', 'RecentOrganizationsStream',
            'RecentPersonsStream', 'RecentProductsStream', 'DealStageChangeStream', 'DealsProductsStream'
            ]
