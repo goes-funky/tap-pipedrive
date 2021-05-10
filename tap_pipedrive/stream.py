@@ -17,6 +17,7 @@ class PipedriveStream(object):
     schema_path = 'schemas/{}.json'
     schema_cache = None
     replication_method = 'INCREMENTAL'
+    schema_custom_fields = {}
 
     start = 0
     limit = 100
@@ -34,6 +35,7 @@ class PipedriveStream(object):
         schema_path = os.path.join(os.path.dirname(os.path.realpath(__file__)),
                                    self.schema_path.format(self.schema))
         schema = singer.utils.load_json(schema_path)
+
         return schema
 
     def write_schema(self):

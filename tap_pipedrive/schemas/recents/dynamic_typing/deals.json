@@ -85,13 +85,8 @@
       "format": "date-time"
     },
     "first_won_time": {
-      "anyOf": [
-        {
-          "type": ["string", "null"],
-          "format": "date-time"
-        },
-        {"type": ["string", "null"]}
-      ]
+      "type": ["string", "null"],
+      "format": "date-time"
     },
     "lost_time": {
       "type": ["string", "null"],
@@ -183,6 +178,15 @@
     },
     "person_hidden": {
       "type": ["null", "boolean"]
+    },
+    "group_id": {
+      "type": ["null", "integer"]
+    },
+    "group_name": {
+      "type": ["null", "string"]
+    },
+    "renewal_type": {
+      "type": ["null", "string"]
     }
   }
 }

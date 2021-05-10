@@ -93,6 +93,19 @@ def retry_after_wait_gen():
         yield math.floor(float(sleep_time_str))
 
 
+def extract_custom_meta(stream_metadata):
+    custom_mdata = {}
+    for row in stream_metadata.keys():
+        trow = tuple(row)
+        custom_id = stream_metadata.get(row).get('custom_id')
+        if custom_id:
+            new_id = trow[1]
+            custom_mdata[new_id] = custom_id
+
+    return custom_mdata
+
+
+
 class PipedriveTap(object):
     streams = [
         CurrenciesStream(),
@@ -127,7 +140,8 @@ class PipedriveTap(object):
         for stream in self.streams:
             stream.tap = self
 
-            schema = Schema.from_dict(stream.get_schema())
+            schema = stream.get_schema()
+            schema = Schema.from_dict(schema)
             replication_method = stream.replication_method
             key_properties = stream.key_properties
             replication_key = stream.state_field
@@ -138,13 +152,17 @@ class PipedriveTap(object):
 
             if replication_key:
                 mdata = metadata.write(mdata, (), 'valid-replication-keys', replication_key)
-            # mdata = metadata.write(mdata, (), 'selected', True)
+            mdata = metadata.write(mdata, (), 'selected', True)
 
             for prop, json_schema in schema.properties.items():
                 inclusion = 'available'
                 if prop in key_properties or (stream.state_field and prop == stream.state_field):
                     inclusion = 'automatic'
                 mdata = metadata.write(mdata, ('properties', prop), 'inclusion', inclusion)
+
+                for custom_map_orig_id, custom_map_new_id in stream.schema_custom_fields.items():
+                   if prop == custom_map_new_id:
+                        mdata = metadata.write(mdata, ('properties', custom_map_new_id), 'custom_id', custom_map_orig_id)
 
             catalog.streams.append(CatalogEntry(
                 stream=stream.schema,
@@ -193,7 +211,7 @@ class PipedriveTap(object):
             if stream.state_field:
                 set_currently_syncing(self.state, stream.schema)
                 self.state = singer.write_bookmark(self.state, stream.schema, stream.state_field, str(stream.initial_state))
-                singer.write_state(self.state)
+               # singer.write_state(self.state)
 
             # schema
             stream.write_schema()
@@ -236,7 +254,7 @@ class PipedriveTap(object):
             if stream.state_field:
                 self.state = singer.write_bookmark(self.state, stream.schema, stream.state_field,
                                                    str(stream.earliest_state))
-            singer.write_state(self.state)
+            #singer.write_state(self.state)
 
         # clear currently_syncing
         try:
@@ -255,6 +273,7 @@ class PipedriveTap(object):
         return list(selected_streams)
 
     def do_paginate(self, stream, stream_metadata):
+        custom_map = extract_custom_meta(stream_metadata)
         while stream.has_data():
 
             with singer.metrics.http_request_timer(stream.schema) as timer:
@@ -276,6 +295,11 @@ class PipedriveTap(object):
 
                         if not row: # in case of a non-empty response with an empty element
                             continue
+
+                        for new_field_id, custom_field_id in custom_map.items():
+                            if custom_field_id in row:
+                                row[new_field_id] = row.pop(custom_field_id)
+
                         row = optimus_prime.transform(row, stream.get_schema(), stream_metadata)
                         if stream.write_record(row):
                             counter.increment()

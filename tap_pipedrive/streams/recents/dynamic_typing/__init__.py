@@ -1,7 +1,7 @@
 import singer
 from requests import RequestException
 from tap_pipedrive.streams.recents import RecentsStream
-
+import re
 
 logger = singer.get_logger()
 
@@ -12,6 +12,7 @@ class DynamicTypingRecentsStream(RecentsStream):
     fields_endpoint = ''
 
     def get_schema(self):
+        #custom_map = {}
         if not self.schema_cache:
             schema = self.load_schema()
 
@@ -55,8 +56,12 @@ class DynamicTypingRecentsStream(RecentsStream):
                         # be marked mandatory for some amount of time and not
                         # mandatory for another amount of time
                         property_content['type'].append('null')
-
-                        schema['properties'][property['key']] = property_content
+                        if re.search('^([a-zA-Z0-9]{32,})', property['key']):
+                            new_field_id = re.sub('[^a-zA-Z0-9_]', '_', property['name'].lower())
+                            self.schema_custom_fields[property['key']] = new_field_id
+                            schema['properties'][new_field_id] = property_content
+                        else:
+                            schema['properties'][property['key']] = property_content
 
             except Exception as e:
                 raise e

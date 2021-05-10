@@ -93,3 +93,6 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+tap_pipedrive/catalog.json
+tap_pipedrive/config.json
