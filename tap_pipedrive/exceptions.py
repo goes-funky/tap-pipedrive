@@ -1,5 +1,4 @@
 
-
 class PipedriveError(Exception):
     def __init__(self, message=None, response=None):
         super().__init__(message)
@@ -43,4 +42,7 @@ class PipedriveNotImplementedError(PipedriveError):
     pass
 
 class PipedriveServiceUnavailableError(PipedriveError):
+    pass
+
+class RetryOnNullResponseException(PipedriveError):
     pass

@@ -11,9 +11,9 @@ from json import JSONDecodeError
 from singer import set_currently_syncing, metadata
 from singer.catalog import Catalog, CatalogEntry, Schema
 from .config import BASE_URL, CONFIG_DEFAULTS
-from .exceptions import (PipedriveError, PipedriveNotFoundError, PipedriveBadRequestError, PipedriveUnauthorizedError, PipedrivePaymentRequiredError, 
-                        PipedriveForbiddenError, PipedriveGoneError, PipedriveUnsupportedMediaError, PipedriveUnprocessableEntityError, PipedriveTooManyRequestsError, 
-                        PipedriveTooManyRequestsInSecondError,PipedriveInternalServiceError, PipedriveNotImplementedError, PipedriveServiceUnavailableError)
+from .exceptions import (PipedriveError, PipedriveNotFoundError, PipedriveBadRequestError, PipedriveUnauthorizedError, PipedrivePaymentRequiredError,
+                         PipedriveForbiddenError, PipedriveGoneError, PipedriveUnsupportedMediaError, PipedriveUnprocessableEntityError, PipedriveTooManyRequestsError,
+                         PipedriveTooManyRequestsInSecondError, PipedriveInternalServiceError, PipedriveNotImplementedError, PipedriveServiceUnavailableError, RetryOnNullResponseException)
 from .streams import (CurrenciesStream, ActivityTypesStream, FiltersStream, StagesStream, PipelinesStream,
                       RecentNotesStream, RecentUsersStream, RecentActivitiesStream, RecentDealsStream,
                       RecentFilesStream, RecentOrganizationsStream, RecentPersonsStream, RecentProductsStream,
@@ -320,8 +320,11 @@ class PipedriveTap(object):
         params = stream.update_request_params(params)
         return self.execute_request(stream.endpoint, params=params)
 
-    @backoff.on_exception(backoff.expo, (PipedriveInternalServiceError, simplejson.scanner.JSONDecodeError), max_tries = 3)
-    @backoff.on_exception(retry_after_wait_gen, PipedriveTooManyRequestsInSecondError, giveup=is_not_status_code_fn([429]), jitter=None, max_tries=3)
+    @backoff.on_exception(backoff.expo, (
+            PipedriveInternalServiceError, simplejson.scanner.JSONDecodeError, RetryOnNullResponseException),
+                          max_tries=10)
+    @backoff.on_exception(retry_after_wait_gen, PipedriveTooManyRequestsInSecondError,
+                          giveup=is_not_status_code_fn([429]), jitter=None, max_tries=10)
     def execute_request(self, endpoint, params=None):
         headers = {
             'User-Agent': self.config['user-agent']
@@ -336,7 +339,9 @@ class PipedriveTap(object):
         logger.debug('Firing request at {} with params: {}'.format(url, _params))
         response = requests.get(url, headers=headers, params=_params)
 
-        if response.status_code == 200 and isinstance(response, requests.Response) :
+        if response.status_code == 200 and isinstance(response, requests.Response):
+            if response.text == "null":
+                raise RetryOnNullResponseException
             try:
                 # Verifying json is valid or not
                 response.json()

@@ -96,3 +96,5 @@ ENV/
 
 tap_pipedrive/catalog.json
 tap_pipedrive/config.json
+config.json
+discovery.json
