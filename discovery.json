@@ -1,0 +1,1122 @@
+
+{
+  "streams": [
+    {
+      "tap_stream_id": "deals",
+      "key_properties": [
+        "id"
+      ],
+      "schema": {
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "creator_user_id": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "user_id": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "person_id": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "org_id": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "stage_id": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "title": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "value": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "currency": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "add_time": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "update_time": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "stage_change_time": {
+            "format": "date-time",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "active": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "deleted": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "status": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "probability": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "next_activity_date": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "next_activity_time": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "next_activity_id": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "last_activity_id": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "last_activity_date": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "lost_reason": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "visible_to": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "close_time": {
+            "format": "date-time",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "pipeline_id": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "won_time": {
+            "format": "date-time",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "first_won_time": {
+            "anyOf": [
+              {
+                "type": [
+                  "string",
+                  "null"
+                ],
+                "format": "date-time"
+              },
+              {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              }
+            ]
+          },
+          "lost_time": {
+            "format": "date-time",
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "products_count": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "files_count": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "notes_count": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "followers_count": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "email_messages_count": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "activities_count": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "done_activities_count": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "undone_activities_count": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "reference_activities_count": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "participants_count": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "expected_close_date": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "last_incoming_mail_time": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "last_outgoing_mail_time": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "stage_order_nr": {
+            "type": [
+              "null",
+              "integer"
+            ]
+          },
+          "person_name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "org_name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "next_activity_subject": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "next_activity_type": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "next_activity_duration": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "next_activity_note": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "formatted_value": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "rotten_time": {
+            "format": "date-time",
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "weighted_value": {
+            "type": [
+              "null",
+              "number"
+            ]
+          },
+          "formatted_weighted_value": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "owner_name": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "cc_email": {
+            "type": [
+              "null",
+              "string"
+            ]
+          },
+          "org_hidden": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "person_hidden": {
+            "type": [
+              "null",
+              "boolean"
+            ]
+          },
+          "pipeline": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "label": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "weighted_value_currency": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "34af89640bb747112f778eadbf5fcdaf39fb3fd5": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "c7dfac30bdb2a397fae6f04585eb5208f1c54b7b": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "21d654cfcb699fa922a3520485fbece26dfff362": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "b51c6dea116691392a0c0ff6ce1c2dee3ec47379": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "91b342701ec002022c3302db38591d77bb26710b": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "c424eaee2094f9f9c600b1abea18395ccd386ec9": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "5547441fadf3586970d7519b968a4eed04a046ce": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "604abe3b9c48d0dcfc0cf0731bbdd6b1f73ce177": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "8a94f4915ed75b1f838804b707782a7736f4570b": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "5938a7f2a232dbe0f210756ae1287c4270152017": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "07337472fe8fac15f7f627a46714597da24fad6f": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "07337472fe8fac15f7f627a46714597da24fad6f_currency": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "d3fbd87291290fed2df73471a4ddee4eba275ed4": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        },
+        "type": "object"
+      },
+      "stream": "deals",
+      "metadata": [
+        {
+          "breadcrumb": [],
+          "metadata": {
+            "selected": true
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "id"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "creator_user_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "user_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "person_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "org_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "stage_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "title"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "value"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "currency"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "add_time"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "update_time"
+          ],
+          "metadata": {
+            "inclusion": "automatic"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "stage_change_time"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "active"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "deleted"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "status"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "probability"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "next_activity_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "next_activity_time"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "next_activity_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "last_activity_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "last_activity_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "lost_reason"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "visible_to"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "close_time"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "pipeline_id"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "won_time"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "first_won_time"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "lost_time"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "products_count"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "files_count"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "notes_count"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "followers_count"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "email_messages_count"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "activities_count"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "done_activities_count"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "undone_activities_count"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "reference_activities_count"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "participants_count"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "expected_close_date"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "last_incoming_mail_time"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "last_outgoing_mail_time"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "stage_order_nr"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "person_name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "org_name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "next_activity_subject"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "next_activity_type"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "next_activity_duration"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "next_activity_note"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "formatted_value"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "rotten_time"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "weighted_value"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "formatted_weighted_value"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "owner_name"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "cc_email"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "org_hidden"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "person_hidden"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "pipeline"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "label"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "weighted_value_currency"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "34af89640bb747112f778eadbf5fcdaf39fb3fd5"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "c7dfac30bdb2a397fae6f04585eb5208f1c54b7b"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "21d654cfcb699fa922a3520485fbece26dfff362"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "b51c6dea116691392a0c0ff6ce1c2dee3ec47379"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "91b342701ec002022c3302db38591d77bb26710b"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "c424eaee2094f9f9c600b1abea18395ccd386ec9"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "5547441fadf3586970d7519b968a4eed04a046ce"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "604abe3b9c48d0dcfc0cf0731bbdd6b1f73ce177"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "8a94f4915ed75b1f838804b707782a7736f4570b"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "5938a7f2a232dbe0f210756ae1287c4270152017"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "07337472fe8fac15f7f627a46714597da24fad6f"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "07337472fe8fac15f7f627a46714597da24fad6f_currency"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        },
+        {
+          "breadcrumb": [
+            "properties",
+            "d3fbd87291290fed2df73471a4ddee4eba275ed4"
+          ],
+          "metadata": {
+            "inclusion": "available"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -136,7 +136,10 @@ class PipedriveTap(object):
             schema = Schema.from_dict(stream.get_schema())
             key_properties = stream.key_properties
 
-            metadata = []
+            metadata = [{
+                'breadcrumb': [],
+                'metadata': {}
+            }]
             for prop, json_schema in schema.properties.items():
                 inclusion = 'available'
                 if prop in key_properties or (stream.state_field and prop == stream.state_field):
