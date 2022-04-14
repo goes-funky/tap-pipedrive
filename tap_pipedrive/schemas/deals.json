@@ -238,19 +238,23 @@
         "type": [
           "string",
           "null"
-        ]
+        ],
+      "format": "date-time"
       },
       "update_time": {
         "type": [
           "string",
           "null"
-        ]
+        ],
+        "format": "date-time"
       },
       "stage_change_time": {
         "type": [
           "string",
           "null"
-        ]
+        ],
+        "format": "date-time"
+
       },
       "active": {
         "type": [
@@ -280,7 +284,8 @@
         "type": [
           "string",
           "null"
-        ]
+        ],
+              "format": "date"
       },
       "next_activity_time": {
         "type": [
@@ -304,7 +309,8 @@
         "type": [
           "string",
           "null"
-        ]
+        ],
+        "format": "date"
       },
       "lost_reason": {
         "type": [
@@ -322,7 +328,8 @@
         "type": [
           "string",
           "null"
-        ]
+        ],
+        "format": "date-time"
       },
       "pipeline_id": {
         "type": [
@@ -334,19 +341,22 @@
         "type": [
           "string",
           "null"
-        ]
+        ],
+        "format": "date-time"
       },
       "first_won_time": {
         "type": [
           "string",
           "null"
-        ]
+        ],
+        "format": "date-time"
       },
       "lost_time": {
         "type": [
           "string",
           "null"
-        ]
+        ],
+        "format": "date-time"
       },
       "products_count": {
         "type": [
@@ -406,19 +416,22 @@
         "type": [
           "string",
           "null"
-        ]
+        ],
+        "format": "date"
       },
       "last_incoming_mail_time": {
         "type": [
           "string",
           "null"
-        ]
+        ],
+        "format": "date-time"
       },
       "last_outgoing_mail_time": {
         "type": [
           "string",
           "null"
-        ]
+        ],
+        "format": "date-time"
       },
       "label": {
         "type": [
@@ -514,7 +527,8 @@
         "type": [
           "string",
           "null"
-        ]
+        ],
+        "format": "date-time"
       },
       "owner_name": {
         "type": [
