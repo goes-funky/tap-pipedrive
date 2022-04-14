@@ -20,8 +20,8 @@ class PipedriveStream(object):
     schema_custom_fields = {}
 
     start = 0
-    limit = 100
-    next_start = 100
+    limit = 500
+    next_start = 500
     more_items_in_collection = True
 
     id_list = False
@@ -138,11 +138,11 @@ class PipedriveStream(object):
 
 class PipedriveIterStream(PipedriveStream):
     id_list = True
-    
+
     def get_deal_ids(self, tap):
 
         # note when the stream starts syncing
-        self.stream_start = pendulum.now('UTC') # explicitly set timezone to UTC
+        self.stream_start = pendulum.now('UTC')  # explicitly set timezone to UTC
 
         # create checkpoint at inital_state to only find stage changes more recent than initial_state (bookmark)
         checkpoint = self.initial_state
@@ -170,7 +170,6 @@ class PipedriveIterStream(PipedriveStream):
             self.these_deals = this_page_ids  # need the list of deals to check for last id in the tap
             for deal_id in this_page_ids:
                 yield deal_id
-
 
     def find_deal_ids(self, data, start, stop):
 

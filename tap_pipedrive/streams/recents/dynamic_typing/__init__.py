@@ -12,7 +12,7 @@ class DynamicTypingRecentsStream(RecentsStream):
     fields_endpoint = ''
 
     def get_schema(self):
-        #custom_map = {}
+        # custom_map = {}
         if not self.schema_cache:
             schema = self.load_schema()
 
@@ -22,7 +22,7 @@ class DynamicTypingRecentsStream(RecentsStream):
                 raise e
 
             try:
-                payload = fields_response.json() # Verifying response in execute_request
+                payload = fields_response.json()  # Verifying response in execute_request
 
                 for property in payload['data']:
                     if property['key'] not in self.static_fields:
