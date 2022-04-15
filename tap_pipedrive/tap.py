@@ -19,8 +19,7 @@ from .exceptions import (PipedriveError, PipedriveNotFoundError, PipedriveBadReq
 from .streams import (CurrenciesStream, ActivityTypesStream, FiltersStream, StagesStream, PipelinesStream,
                       RecentNotesStream, RecentUsersStream, RecentActivitiesStream,
                       RecentFilesStream, RecentOrganizationsStream, RecentPersonsStream, RecentProductsStream,
-                      DealStageChangeStream, DealsProductsStream, DealsStream)
-from .streams.deals import DeletedDealsStream
+                      DealStageChangeStream, DealsProductsStream, RecentDealsStream, RecentDeletedDealsStream)
 
 logger = singer.get_logger()
 
@@ -128,8 +127,8 @@ class PipedriveTap(object):
         # RecentDeleteLogsStream(), No delete_logs item is supported by API
         DealStageChangeStream(),
         DealsProductsStream(),
-        DealsStream(),
-        DeletedDealsStream()
+        RecentDealsStream(),
+        RecentDeletedDealsStream()
     ]
 
     def __init__(self, config, state):

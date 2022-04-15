@@ -1,7 +1,6 @@
 import singer
 from tap_pipedrive.stream import PipedriveStream
 
-
 logger = singer.get_logger()
 
 
@@ -30,3 +29,27 @@ class RecentsStream(PipedriveStream):
 
     def process_row(self, row):
         return row['data']
+
+
+class DealsDynamicStream(PipedriveStream):
+    endpoint = 'deals'
+    schema = None
+    schema_path = 'schemas/recents/{}.json'
+
+    def update_request_params(self, params):
+        """
+        Filter recents enpoint data with items and since_timestamp
+        """
+        params.update({
+        })
+        return params
+
+    def write_schema(self):
+        # for /recents/ streams override default (schema name equals to endpoint) with items
+        singer.write_schema(self.schema, self.get_schema(), key_properties=self.key_properties)
+
+    def get_name(self):
+        return self.schema
+
+    def process_row(self, row):
+        return row
