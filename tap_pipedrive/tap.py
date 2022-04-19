@@ -143,6 +143,9 @@ class PipedriveTap(object):
         catalog = Catalog([])
 
         for stream in self.streams:
+            if isinstance(stream, RecentDeletedDealsStream):
+                continue
+
             stream.tap = self
 
             schema = stream.get_schema()
