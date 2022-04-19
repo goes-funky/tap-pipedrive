@@ -224,7 +224,7 @@
       },
       "value": {
         "type": [
-          "integer",
+          "number",
           "null"
         ]
       },
@@ -507,7 +507,7 @@
       },
       "weighted_value": {
         "type": [
-          "integer",
+          "number",
           "null"
         ]
       },
