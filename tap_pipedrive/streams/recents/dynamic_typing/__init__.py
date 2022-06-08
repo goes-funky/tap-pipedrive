@@ -53,6 +53,8 @@ def get_dynamic_schema(stream):
                     property_content['type'].append('null')
                     if re.search('^([a-zA-Z0-9]{32,})', property['key']):
                         new_field_id = re.sub('[^a-zA-Z0-9_]', '_', property['name'].lower())
+                        if new_field_id[0].isdigit():
+                            new_field_id = "c_" + new_field_id
                         stream.schema_custom_fields[property['key']] = new_field_id
                         schema['properties'][new_field_id] = property_content
                     else:
