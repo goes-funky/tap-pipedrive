@@ -174,17 +174,27 @@ class PipedriveIterStream(PipedriveStream):
     def find_deal_ids(self, data, start, stop):
 
         # find all deals that were *added* after the start time and before the stop time
-        added_ids = [data[i]['id']
+        if data is not None:
+            added_ids = [data[i]['id']
                      for i in range(len(data))
                      if (data[i]['add_time'] is not None
                          and start <= pendulum.parse(data[i]['add_time']) < stop)]
 
-        # find all deals that a) had a stage change at any time (i.e., the stage_change_time is not None),
-        #                     b) had a stage change after the start time and before the stop time, and
-        #                     c) are not in added_ids
-        changed_ids = [data[i]['id']
-                       for i in range(len(data))
-                       if (data[i]['id'] not in added_ids)
-                       and (data[i]['stage_change_time'] is not None
-                            and start <= pendulum.parse(data[i]['stage_change_time']) < stop)]
+            # find all deals that a) had a stage change at any time (i.e., the stage_change_time is not None),
+            #                     b) had a stage change after the start time and before the stop time, and
+            #                     c) are not in added_ids
+            changed_ids = [data[i]['id']
+                           for i in range(len(data))
+                           if (data[i]['id'] not in added_ids)
+                           and (data[i]['stage_change_time'] is not None
+                                and start <= pendulum.parse(data[i]['stage_change_time']) < stop)]
+        else:
+            added_ids = []
+            changed_ids = []
+
         return added_ids + changed_ids
+
+
+class StageIterStream(PipedriveStream):
+    # TODO: colud be something similar to PipedriveIterStream, but with stage_id
+    pass

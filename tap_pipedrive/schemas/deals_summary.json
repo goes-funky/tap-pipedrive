@@ -1,0 +1,72 @@
+{
+  "type": "object",
+  "properties": {
+    "stage_id": {
+      "type": "integer"
+    },
+    "values_total": {
+      "type": "array",
+      "items": {
+        "currency": {
+          "type": "string"
+        },
+        "value": {
+          "type": "integer"
+        },
+        "count": {
+          "type": "integer"
+        },
+        "value_converted": {
+          "type": "integer"
+        },
+        "value_formatted": {
+          "type": "string"
+        },
+        "value_converted_formatted": {
+          "type": "string"
+        },
+        "is_custom_currency": {
+          "type": "boolean"
+        }
+      }
+    },
+    "weighted_values_total": {
+      "type": "array",
+      "items": {
+        "currency": {
+          "type": "string"
+        },
+        "value": {
+          "type": "integer"
+        },
+        "count": {
+          "type": "integer"
+        },
+        "value_formatted": {
+          "type": "string"
+        },
+        "is_custom_currency": {
+          "type": "boolean"
+        }
+      }
+    },
+    "total_count": {
+      "type": "integer"
+    },
+    "total_custom_currency_count": {
+      "type": "integer"
+    },
+    "total_currency_converted_value": {
+      "type": "integer"
+    },
+    "total_weighted_currency_converted_value": {
+      "type": "integer"
+    },
+    "total_currency_converted_value_formatted": {
+      "type": "string"
+    },
+    "total_weighted_currency_converted_value_formatted": {
+      "type": "string"
+    }
+  }
+}

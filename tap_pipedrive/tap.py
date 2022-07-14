@@ -19,7 +19,7 @@ from .exceptions import (PipedriveError, PipedriveNotFoundError, PipedriveBadReq
 from .streams import (CurrenciesStream, ActivityTypesStream, FiltersStream, StagesStream, PipelinesStream,
                       RecentNotesStream, RecentUsersStream, RecentActivitiesStream,
                       RecentFilesStream, RecentOrganizationsStream, RecentPersonsStream, RecentProductsStream,
-                      DealStageChangeStream, DealsProductsStream, RecentDealsStream, RecentDeletedDealsStream)
+                      DealStageChangeStream, DealsProductsStream, RecentDealsStream, RecentDeletedDealsStream, DealsSummaryStream)
 
 logger = singer.get_logger()
 
@@ -128,7 +128,8 @@ class PipedriveTap(object):
         DealStageChangeStream(),
         DealsProductsStream(),
         RecentDealsStream(),
-        RecentDeletedDealsStream()
+        RecentDeletedDealsStream(),
+        DealsSummaryStream()
     ]
 
     def __init__(self, config, state):
