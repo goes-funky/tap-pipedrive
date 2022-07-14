@@ -17,7 +17,17 @@ class DealsSummaryStream(PipedriveIterStream):
         self.stage_id = stage_id
         self.endpoint = self.id_endpoint.format(stage_id)
 
+    def add_currency(self, row):
+        new_list = []
+        for elm in row:
+            row[elm]['currency'] = elm
+            new_list.append(row[elm])
+        return new_list
+
     def process_row(self, row):
-        # TODO: here we transform row data
+        # add currency field
         row['stage_id'] = self.stage_id
+        if row['total_count'] > 0:
+            row['values_total'] = self.add_currency(row['values_total'])
+            row['weighted_values_total'] = self.add_currency(row['weighted_values_total'])
         return row
