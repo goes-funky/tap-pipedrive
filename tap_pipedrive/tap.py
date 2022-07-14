@@ -321,7 +321,12 @@ class PipedriveTap(object):
 
     def iterate_response(self, response):
         payload = response.json()
-        return [] if payload['data'] is None else payload['data']
+        if payload['data'] is None:
+            return []
+        else:
+            if type(payload['data']) is dict:
+                return [payload['data']]
+            return payload['data']
 
     def execute_stream_request(self, stream):
         params = {

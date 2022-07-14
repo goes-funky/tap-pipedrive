@@ -193,8 +193,3 @@ class PipedriveIterStream(PipedriveStream):
             changed_ids = []
 
         return added_ids + changed_ids
-
-
-class StageIterStream(PipedriveStream):
-    # TODO: colud be something similar to PipedriveIterStream, but with stage_id
-    pass
