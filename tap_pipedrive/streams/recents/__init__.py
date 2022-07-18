@@ -1,5 +1,5 @@
 import singer
-from tap_pipedrive.stream import PipedriveStream
+from tap_pipedrive.stream import PipedriveStream, PipedriveIterStream
 
 logger = singer.get_logger()
 
@@ -53,3 +53,9 @@ class DealsDynamicStream(PipedriveStream):
 
     def process_row(self, row):
         return row
+
+
+class DealDetails(PipedriveIterStream):
+    endpoint = 'deals/{}'
+    schema = None
+    schema_path = 'schemas/recents/{}.json'

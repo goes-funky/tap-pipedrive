@@ -1,6 +1,6 @@
 import singer
 from requests import RequestException
-from tap_pipedrive.streams.recents import RecentsStream, DealsDynamicStream
+from tap_pipedrive.streams.recents import RecentsStream, DealsDynamicStream, DealDetails
 import re
 
 logger = singer.get_logger()
@@ -77,6 +77,15 @@ class DynamicTypingRecentsStream(RecentsStream):
 
 
 class DynamicsDeals(DealsDynamicStream):
+    schema_path = 'schemas/recents/dynamic_typing/{}.json'
+    static_fields = []
+    fields_endpoint = ''
+
+    def get_schema(self):
+        return get_dynamic_schema(self)
+
+
+class DynamicsDealDetails(DealDetails):
     schema_path = 'schemas/recents/dynamic_typing/{}.json'
     static_fields = []
     fields_endpoint = ''
