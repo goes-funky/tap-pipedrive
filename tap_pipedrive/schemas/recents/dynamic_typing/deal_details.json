@@ -668,10 +668,8 @@
       "stay_in_pipeline_stages": {
         "properties": {
           "times_in_stages": {
-            "properties": {
-            },
             "type": [
-              "object",
+              "string",
               "null"
             ]
           },
