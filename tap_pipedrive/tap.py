@@ -15,7 +15,7 @@ from .exceptions import (PipedriveError, PipedriveNotFoundError, PipedriveBadReq
                          PipedriveForbiddenError, PipedriveGoneError, PipedriveUnsupportedMediaError,
                          PipedriveUnprocessableEntityError, PipedriveTooManyRequestsError,
                          PipedriveTooManyRequestsInSecondError, PipedriveInternalServiceError,
-                         PipedriveNotImplementedError, PipedriveServiceUnavailableError, RetryOnNullResponseException)
+                         PipedriveNotImplementedError, PipedriveServiceUnavailableError, RetryOnNullResponseException, RetryOnGetawayTimeoutResponseException)
 from .streams import (CurrenciesStream, ActivityTypesStream, FiltersStream, StagesStream, PipelinesStream,
                       RecentNotesStream, RecentUsersStream, RecentActivitiesStream,
                       RecentFilesStream, RecentOrganizationsStream, RecentPersonsStream, RecentProductsStream,
@@ -73,6 +73,10 @@ ERROR_CODE_EXCEPTION_MAPPING = {
     503: {
         "raise_exception": PipedriveServiceUnavailableError,
         "message": "Schedule maintenance on Pipedrive's end."
+    },
+    504: {
+        "raise_exception": RetryOnGetawayTimeoutResponseException,
+        "message": "The gateway server did not receive a timely response"
     },
 }
 
@@ -339,7 +343,7 @@ class PipedriveTap(object):
         return self.execute_request(stream.endpoint, params=params)
 
     @backoff.on_exception(backoff.expo, (
-            PipedriveInternalServiceError, simplejson.scanner.JSONDecodeError, RetryOnNullResponseException),
+            PipedriveInternalServiceError, simplejson.scanner.JSONDecodeError, RetryOnNullResponseException, RetryOnGetawayTimeoutResponseException),
                           max_tries=10)
     @backoff.on_exception(retry_after_wait_gen, PipedriveTooManyRequestsInSecondError,
                           giveup=is_not_status_code_fn([429]), jitter=None, max_tries=10)

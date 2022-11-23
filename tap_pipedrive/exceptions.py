@@ -46,3 +46,6 @@ class PipedriveServiceUnavailableError(PipedriveError):
 
 class RetryOnNullResponseException(PipedriveError):
     pass
+
+class RetryOnGetawayTimeoutResponseException(PipedriveError):
+    pass
