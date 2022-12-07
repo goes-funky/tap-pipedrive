@@ -343,7 +343,7 @@ class PipedriveTap(object):
         return self.execute_request(stream.endpoint, params=params)
 
     @backoff.on_exception(backoff.expo, (
-            PipedriveInternalServiceError, simplejson.scanner.JSONDecodeError, RetryOnNullResponseException, RetryOnGetawayTimeoutResponseException),
+            PipedriveInternalServiceError, simplejson.scanner.JSONDecodeError, RetryOnNullResponseException, RetryOnGetawayTimeoutResponseException, requests.ConnectionError),
                           max_tries=10)
     @backoff.on_exception(retry_after_wait_gen, PipedriveTooManyRequestsInSecondError,
                           giveup=is_not_status_code_fn([429]), jitter=None, max_tries=10)
