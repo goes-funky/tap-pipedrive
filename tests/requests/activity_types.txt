@@ -1,0 +1,163 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - tap-pipedrive (+support@stitchdata.com)
+    method: GET
+    uri: https://api.pipedrive.com/v1/activityTypes?api_token=589b6a5375dd200f02bb25a2092347bad0148a48&start=0&limit=500
+  response:
+    body:
+      string: '{"success":true,"data":[{"id":24,"order_nr":1,"name":"Sales Call","key_string":"sales_call","icon_key":"linegraph","active_flag":true,"color":null,"is_custom_flag":true,"add_time":"2022-02-15
+        10:45:48","update_time":"2022-02-15 10:45:48"},{"id":2,"order_nr":2,"name":"Meeting","key_string":"meeting","icon_key":"meeting","active_flag":false,"color":null,"is_custom_flag":false,"add_time":"2021-07-20
+        08:11:38","update_time":"2021-08-31 13:40:33"},{"id":25,"order_nr":2,"name":"Appointment
+        Call","key_string":"appointment_call","icon_key":"addressbook","active_flag":true,"color":null,"is_custom_flag":true,"add_time":"2022-02-15
+        10:46:12","update_time":"2022-10-12 07:59:03"},{"id":26,"order_nr":3,"name":"Prescription
+        Call","key_string":"prescription_call","icon_key":"picture","active_flag":true,"color":null,"is_custom_flag":true,"add_time":"2022-02-15
+        10:47:53","update_time":"2022-02-16 13:59:47"},{"id":4,"order_nr":3,"name":"Deadline","key_string":"deadline","icon_key":"deadline","active_flag":false,"color":null,"is_custom_flag":false,"add_time":"2021-07-20
+        08:11:38","update_time":"2021-11-04 11:07:25"},{"id":27,"order_nr":4,"name":"Installation
+        Call","key_string":"installation_call","icon_key":"key","active_flag":true,"color":null,"is_custom_flag":true,"add_time":"2022-02-15
+        10:48:11","update_time":"2022-02-15 10:48:11"},{"id":9,"order_nr":5,"name":"SMS
+        Vorlage Rezept","key_string":"sms","icon_key":"smartphone","active_flag":false,"color":null,"is_custom_flag":true,"add_time":"2021-09-15
+        15:10:21","update_time":"2021-11-09 14:38:50"},{"id":28,"order_nr":5,"name":"Code
+        Call","key_string":"code_call","icon_key":"finish","active_flag":true,"color":null,"is_custom_flag":true,"add_time":"2022-02-15
+        10:48:33","update_time":"2022-02-16 14:00:47"},{"id":30,"order_nr":6,"name":"Resubscription
+        Call","key_string":"resubscription_call","icon_key":"loop","active_flag":true,"color":null,"is_custom_flag":true,"add_time":"2022-04-01
+        06:54:45","update_time":"2022-04-01 06:54:45"},{"id":6,"order_nr":6,"name":"Lunch","key_string":"lunch","icon_key":"lunch","active_flag":false,"color":null,"is_custom_flag":false,"add_time":"2021-07-20
+        08:11:38","update_time":"2021-08-31 13:40:27"},{"id":12,"order_nr":6,"name":"SMS
+        Vorlage Aktivierungscode","key_string":"sms_vorlage_aktivierungsco","icon_key":"smartphone","active_flag":false,"color":null,"is_custom_flag":true,"add_time":"2021-09-20
+        10:03:51","update_time":"2021-12-01 14:32:43"},{"id":53,"order_nr":7,"name":"Reactivation
+        Call","key_string":"reactivation_call","icon_key":"deadline","active_flag":true,"color":null,"is_custom_flag":true,"add_time":"2022-11-28
+        08:45:50","update_time":"2022-11-28 10:12:17"},{"id":41,"order_nr":8,"name":"Activation
+        Call","key_string":"activation_call","icon_key":"bulb","active_flag":true,"color":null,"is_custom_flag":true,"add_time":"2022-08-19
+        08:13:45","update_time":"2022-08-19 08:13:45"},{"id":8,"order_nr":8,"name":"Notiz","key_string":"notiz1","icon_key":"clip","active_flag":false,"color":null,"is_custom_flag":true,"add_time":"2021-08-19
+        15:42:55","update_time":"2021-08-31 13:40:20"},{"id":5,"order_nr":9,"name":"Email","key_string":"email","icon_key":"email","active_flag":true,"color":null,"is_custom_flag":false,"add_time":"2021-07-20
+        08:11:38","update_time":"2021-11-04 11:07:25"},{"id":1,"order_nr":10,"name":"Call","key_string":"call","icon_key":"call","active_flag":true,"color":null,"is_custom_flag":false,"add_time":"2021-07-20
+        08:11:38","update_time":null},{"id":14,"order_nr":11,"name":"Sales Call 1","key_string":"sales_call_1","icon_key":"call","active_flag":false,"color":null,"is_custom_flag":true,"add_time":"2021-10-18
+        08:23:20","update_time":"2021-11-04 11:06:34"},{"id":49,"order_nr":11,"name":"Care
+        Call","key_string":"care_call","icon_key":"meeting","active_flag":true,"color":null,"is_custom_flag":true,"add_time":"2022-10-12
+        07:58:41","update_time":"2022-10-12 07:59:25"},{"id":15,"order_nr":12,"name":"Sales
+        Call 2","key_string":"sales_call_2","icon_key":"call","active_flag":false,"color":null,"is_custom_flag":true,"add_time":"2021-10-18
+        08:23:26","update_time":"2021-11-04 11:06:28"},{"id":3,"order_nr":12,"name":"Task","key_string":"task","icon_key":"task","active_flag":true,"color":null,"is_custom_flag":false,"add_time":"2021-07-20
+        08:11:38","update_time":"2021-08-31 13:40:33"},{"id":48,"order_nr":13,"name":"Datenschutz
+        Vorfall","key_string":"datenschutz_vorfall","icon_key":"bell","active_flag":true,"color":null,"is_custom_flag":true,"add_time":"2022-08-22
+        12:12:00","update_time":"2022-08-22 12:12:00"},{"id":16,"order_nr":14,"name":"Bug
+        Feedback","key_string":"feedback","icon_key":"tool","active_flag":true,"color":null,"is_custom_flag":true,"add_time":"2021-11-04
+        10:59:25","update_time":"2022-02-16 14:01:03"},{"id":22,"order_nr":14,"name":"whatever","key_string":"whatever","icon_key":"cart","active_flag":false,"color":null,"is_custom_flag":true,"add_time":"2021-12-01
+        14:35:00","update_time":"2021-12-01 14:35:13"},{"id":50,"order_nr":15,"name":"Krankenkasse
+        Ablehnung","key_string":"krankenkasse_ablehnung","icon_key":"shuffle","active_flag":true,"color":null,"is_custom_flag":true,"add_time":"2022-10-14
+        11:30:43","update_time":"2022-10-14 11:30:43"},{"id":7,"order_nr":16,"name":"Notiz","key_string":"notiz","icon_key":"document","active_flag":true,"color":null,"is_custom_flag":true,"add_time":"2021-08-19
+        15:42:21","update_time":"2021-11-04 11:07:25"},{"id":23,"order_nr":17,"name":"Product
+        Feedback","key_string":"product_feedback","icon_key":"brush","active_flag":true,"color":null,"is_custom_flag":true,"add_time":"2022-02-07
+        13:56:25","update_time":"2022-02-07 13:56:25"},{"id":21,"order_nr":18,"name":"Medical
+        Feedback","key_string":"medical_feedback","icon_key":"bell","active_flag":true,"color":null,"is_custom_flag":true,"add_time":"2021-12-01
+        13:40:43","update_time":"2021-12-01 14:32:43"},{"id":10,"order_nr":19,"name":"SMS
+        Freitext","key_string":"sms_freitext","icon_key":"bubble","active_flag":true,"color":null,"is_custom_flag":true,"add_time":"2021-09-15
+        15:10:38","update_time":"2021-12-01 14:32:43"},{"id":17,"order_nr":20,"name":"Sales
+        SMS","key_string":"sales_sms","icon_key":"linegraph","active_flag":true,"color":null,"is_custom_flag":true,"add_time":"2021-12-01
+        13:34:41","update_time":"2021-12-01 14:32:43"},{"id":18,"order_nr":21,"name":"Appointment
+        SMS","key_string":"appointment_sms","icon_key":"meeting","active_flag":true,"color":null,"is_custom_flag":true,"add_time":"2021-12-01
+        13:38:49","update_time":"2022-02-16 13:58:44"},{"id":19,"order_nr":22,"name":"Prescription
+        SMS","key_string":"prescription_sms","icon_key":"picture","active_flag":true,"color":null,"is_custom_flag":true,"add_time":"2021-12-01
+        13:39:31","update_time":"2022-02-16 14:00:06"},{"id":20,"order_nr":23,"name":"Installation
+        SMS","key_string":"installation_sms","icon_key":"key","active_flag":true,"color":null,"is_custom_flag":true,"add_time":"2021-12-01
+        13:39:49","update_time":"2021-12-01 14:32:43"},{"id":13,"order_nr":24,"name":"SMS
+        Vorlage 1st Contact Gospring","key_string":"sms_vorlage_1st_contact","icon_key":"smartphone","active_flag":true,"color":null,"is_custom_flag":true,"add_time":"2021-09-29
+        15:13:54","update_time":"2022-06-13 18:39:27"},{"id":11,"order_nr":25,"name":"erhaltene
+        SMS","key_string":"erhaltene_sms","icon_key":"wifi","active_flag":true,"color":null,"is_custom_flag":true,"add_time":"2021-09-17
+        15:30:25","update_time":"2021-12-01 14:32:43"},{"id":29,"order_nr":26,"name":"E-Post","key_string":"e_post","icon_key":"plane","active_flag":true,"color":null,"is_custom_flag":true,"add_time":"2022-02-18
+        09:12:17","update_time":"2022-02-18 09:12:17"},{"id":31,"order_nr":27,"name":"Code
+        SMS","key_string":"code_sms","icon_key":"search","active_flag":true,"color":null,"is_custom_flag":true,"add_time":"2022-04-04
+        17:34:34","update_time":"2022-04-04 17:34:34"},{"id":32,"order_nr":28,"name":"Resub
+        SMS","key_string":"resub_sms","icon_key":"shuffle","active_flag":true,"color":null,"is_custom_flag":true,"add_time":"2022-04-04
+        17:35:10","update_time":"2022-04-04 17:35:10"},{"id":33,"order_nr":29,"name":"Wrong
+        Prescription Call","key_string":"wrong_prescription_call","icon_key":"signpost","active_flag":true,"color":null,"is_custom_flag":true,"add_time":"2022-04-18
+        12:46:25","update_time":"2022-04-18 12:46:25"},{"id":34,"order_nr":30,"name":"Bug
+        Feedback FUP","key_string":"bug_feedback_fup","icon_key":"calendar","active_flag":true,"color":null,"is_custom_flag":true,"add_time":"2022-04-18
+        12:52:29","update_time":"2022-04-18 12:52:29"},{"id":35,"order_nr":31,"name":"Invoice","key_string":"invoice","icon_key":"suitcase","active_flag":true,"color":null,"is_custom_flag":true,"add_time":"2022-05-02
+        16:58:05","update_time":"2022-05-02 16:58:05"},{"id":36,"order_nr":32,"name":"Send
+        Study Parcel","key_string":"send_study_parcel","icon_key":"truck","active_flag":true,"color":null,"is_custom_flag":true,"add_time":"2022-05-13
+        08:12:53","update_time":"2022-05-13 08:12:53"},{"id":37,"order_nr":33,"name":"SMS
+        Vorlage 1st Contact TC","key_string":"sms_vorlage_1st_contact_tc","icon_key":"smartphone","active_flag":true,"color":null,"is_custom_flag":true,"add_time":"2022-06-13
+        18:17:16","update_time":"2022-06-13 18:17:16"},{"id":42,"order_nr":34,"name":"No-touch
+        Installation #1","key_string":"no_touch_installation_1","icon_key":"smartphone","active_flag":false,"color":null,"is_custom_flag":true,"add_time":"2022-08-19
+        14:30:58","update_time":"2022-09-02 16:54:15"},{"id":38,"order_nr":34,"name":"SMS
+        Vorlage 1st contact ZAVA","key_string":"sms_vorlage_1st_contact_za","icon_key":"presentation","active_flag":true,"color":null,"is_custom_flag":true,"add_time":"2022-06-13
+        18:17:51","update_time":"2022-06-13 18:17:51"},{"id":43,"order_nr":35,"name":"No-touch
+        Installation #2","key_string":"no_touch_installation_2","icon_key":"smartphone","active_flag":false,"color":null,"is_custom_flag":true,"add_time":"2022-08-19
+        14:31:07","update_time":"2022-09-02 16:54:01"},{"id":39,"order_nr":35,"name":"All
+        Good Call","key_string":"all_good_call","icon_key":"checkbox","active_flag":true,"color":null,"is_custom_flag":true,"add_time":"2022-07-04
+        15:55:26","update_time":"2022-07-04 15:55:26"},{"id":40,"order_nr":36,"name":"keine
+        Aufgabe - bitte eine einstellen","key_string":"no_task","icon_key":"search","active_flag":true,"color":null,"is_custom_flag":true,"add_time":"2022-08-01
+        20:05:25","update_time":"2022-08-01 20:06:30"},{"id":44,"order_nr":36,"name":"No-touch
+        DiGA Code (Installed) #1","key_string":"no_touch_diga_code_install","icon_key":"smartphone","active_flag":false,"color":null,"is_custom_flag":true,"add_time":"2022-08-19
+        14:32:05","update_time":"2022-09-02 16:54:12"},{"id":45,"order_nr":37,"name":"No-touch
+        DiGA Code (Installed) #2","key_string":"no_touch_diga_code_install1","icon_key":"smartphone","active_flag":false,"color":null,"is_custom_flag":true,"add_time":"2022-08-19
+        14:32:37","update_time":"2022-09-02 16:54:09"},{"id":51,"order_nr":37,"name":"Insurance
+        communication","key_string":"insurance_communication","icon_key":"bubble","active_flag":true,"color":null,"is_custom_flag":true,"add_time":"2022-10-21
+        09:01:37","update_time":"2022-10-21 09:01:37"},{"id":46,"order_nr":38,"name":"No-touch
+        DiGA Code (Not Installed) #1","key_string":"no_touch_diga_code_not_ins","icon_key":"smartphone","active_flag":false,"color":null,"is_custom_flag":true,"add_time":"2022-08-19
+        14:32:52","update_time":"2022-09-02 16:54:07"},{"id":52,"order_nr":38,"name":"Warm
+        Up Call","key_string":"warm_up_call","icon_key":"world","active_flag":true,"color":null,"is_custom_flag":true,"add_time":"2022-11-11
+        13:27:28","update_time":"2022-11-11 13:27:28"},{"id":47,"order_nr":39,"name":"No-touch
+        DiGA Code (Not Installed) #2","key_string":"no_touch_diga_code_not_ins1","icon_key":"smartphone","active_flag":false,"color":null,"is_custom_flag":true,"add_time":"2022-08-19
+        14:32:59","update_time":"2022-09-02 16:54:05"}]}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - X-RateLimit-Remaining, X-RateLimit-Limit, X-RateLimit-Reset
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-Ray:
+      - 778e1853aa2e1c33-SOF
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 13 Dec 2022 10:42:47 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=O49DsUdcz6bkIgv7LRycsFUxBFbfglXnNivs6EDCtcg-1670928167-0-Aa6hWa1EJwoBWBAmDAYshjDcc8lEiVHMf/q+6i4HmKQnNfsEqtndd3jcGAzLj8k+EqEuCLcIwXbzrRgFLEeFTcA=;
+        path=/; expires=Tue, 13-Dec-22 11:12:47 GMT; domain=.pipedrive.com; HttpOnly;
+        Secure; SameSite=None
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-RateLimit-Limit:
+      - '80'
+      X-RateLimit-Remaining:
+      - '79'
+      X-RateLimit-Reset:
+      - '2'
+      X-XSS-Protection:
+      - 1; mode=block
+      alt-svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+      badi:
+      - 'Routing: eu-central-1=>eu-central-1; Version: bcd2; Host: bari;'
+      content-length:
+      - '11901'
+      x-content-type-options:
+      - nosniff
+      x-correlation-id:
+      - c79c8f77-1239-4628-8629-4eacc10c27c2
+      x-frame-options:
+      - SAMEORIGIN
+    status:
+      code: 200
+      message: OK
+version: 1

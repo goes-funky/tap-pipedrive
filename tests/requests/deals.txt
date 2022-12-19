@@ -1,0 +1,199 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      User-Agent:
+      - tap-pipedrive (+support@stitchdata.com)
+    method: GET
+    uri: https://api.pipedrive.com/v1/stages?api_token=589b6a5375dd200f02bb25a2092347bad0148a48&sort=id+ASC&start=0&limit=500
+  response:
+    body:
+      string: '{"success":true,"data":[{"id":1,"order_nr":0,"name":"New","active_flag":true,"deal_probability":100,"pipeline_id":1,"rotten_flag":true,"rotten_days":1,"add_time":"2021-07-20
+        10:59:45","update_time":"2022-02-16 13:24:00","pipeline_name":"B2B Pipe","pipeline_deal_probability":true},{"id":73,"order_nr":1,"name":"Contacted","active_flag":true,"deal_probability":100,"pipeline_id":1,"rotten_flag":false,"rotten_days":null,"add_time":"2022-02-08
+        16:55:39","update_time":"2022-02-16 13:24:00","pipeline_name":"B2B Pipe","pipeline_deal_probability":true},{"id":60,"order_nr":2,"name":"In
+        touch","active_flag":true,"deal_probability":100,"pipeline_id":1,"rotten_flag":false,"rotten_days":null,"add_time":"2021-10-13
+        10:18:03","update_time":"2022-02-16 13:24:00","pipeline_name":"B2B Pipe","pipeline_deal_probability":true},{"id":19,"order_nr":3,"name":"Doc
+        visit","active_flag":true,"deal_probability":100,"pipeline_id":1,"rotten_flag":true,"rotten_days":21,"add_time":"2021-09-02
+        07:50:12","update_time":"2022-02-16 13:24:00","pipeline_name":"B2B Pipe","pipeline_deal_probability":true},{"id":5,"order_nr":4,"name":"Prescription","active_flag":true,"deal_probability":100,"pipeline_id":1,"rotten_flag":true,"rotten_days":14,"add_time":"2021-07-20
+        10:59:45","update_time":"2022-02-16 13:24:00","pipeline_name":"B2B Pipe","pipeline_deal_probability":true},{"id":78,"order_nr":5,"name":"Therapy
+        started","active_flag":true,"deal_probability":100,"pipeline_id":1,"rotten_flag":true,"rotten_days":21,"add_time":"2022-02-12
+        17:25:29","update_time":"2022-02-16 13:24:00","pipeline_name":"B2B Pipe","pipeline_deal_probability":true},{"id":75,"order_nr":1,"name":"New","active_flag":true,"deal_probability":100,"pipeline_id":3,"rotten_flag":true,"rotten_days":1,"add_time":"2022-02-08
+        16:58:10","update_time":"2022-02-16 13:24:12","pipeline_name":"D2C Pipe","pipeline_deal_probability":true},{"id":74,"order_nr":2,"name":"Contacted","active_flag":true,"deal_probability":100,"pipeline_id":3,"rotten_flag":false,"rotten_days":null,"add_time":"2022-02-08
+        16:56:21","update_time":"2022-02-16 13:24:12","pipeline_name":"D2C Pipe","pipeline_deal_probability":true},{"id":17,"order_nr":3,"name":"In
+        touch","active_flag":true,"deal_probability":100,"pipeline_id":3,"rotten_flag":false,"rotten_days":null,"add_time":"2021-08-18
+        15:02:46","update_time":"2022-02-16 13:24:12","pipeline_name":"D2C Pipe","pipeline_deal_probability":true},{"id":41,"order_nr":4,"name":"Doc
+        visit","active_flag":true,"deal_probability":100,"pipeline_id":3,"rotten_flag":true,"rotten_days":21,"add_time":"2021-09-13
+        08:47:19","update_time":"2022-02-16 13:24:12","pipeline_name":"D2C Pipe","pipeline_deal_probability":true},{"id":42,"order_nr":5,"name":"Prescription","active_flag":true,"deal_probability":100,"pipeline_id":3,"rotten_flag":true,"rotten_days":14,"add_time":"2021-09-13
+        08:47:19","update_time":"2022-02-16 13:24:12","pipeline_name":"D2C Pipe","pipeline_deal_probability":true},{"id":79,"order_nr":6,"name":"Therapy
+        started","active_flag":true,"deal_probability":100,"pipeline_id":3,"rotten_flag":true,"rotten_days":21,"add_time":"2022-02-12
+        17:38:32","update_time":"2022-02-16 13:24:12","pipeline_name":"D2C Pipe","pipeline_deal_probability":true},{"id":77,"order_nr":1,"name":"New","active_flag":true,"deal_probability":100,"pipeline_id":6,"rotten_flag":true,"rotten_days":1,"add_time":"2022-02-08
+        17:24:57","update_time":"2022-02-16 13:24:24","pipeline_name":"Organic Pipe","pipeline_deal_probability":true},{"id":76,"order_nr":2,"name":"Contacted","active_flag":true,"deal_probability":100,"pipeline_id":6,"rotten_flag":false,"rotten_days":null,"add_time":"2022-02-08
+        17:24:25","update_time":"2022-02-16 13:24:24","pipeline_name":"Organic Pipe","pipeline_deal_probability":true},{"id":59,"order_nr":3,"name":"In
+        touch","active_flag":true,"deal_probability":100,"pipeline_id":6,"rotten_flag":false,"rotten_days":null,"add_time":"2021-10-13
+        10:12:48","update_time":"2022-02-16 13:24:24","pipeline_name":"Organic Pipe","pipeline_deal_probability":true},{"id":49,"order_nr":4,"name":"Doc
+        visit","active_flag":true,"deal_probability":100,"pipeline_id":6,"rotten_flag":true,"rotten_days":21,"add_time":"2021-09-16
+        10:58:15","update_time":"2022-02-16 13:24:24","pipeline_name":"Organic Pipe","pipeline_deal_probability":true},{"id":50,"order_nr":5,"name":"Prescription","active_flag":true,"deal_probability":100,"pipeline_id":6,"rotten_flag":true,"rotten_days":14,"add_time":"2021-09-16
+        10:58:15","update_time":"2022-02-16 13:24:24","pipeline_name":"Organic Pipe","pipeline_deal_probability":true},{"id":80,"order_nr":6,"name":"Therapy
+        started","active_flag":true,"deal_probability":100,"pipeline_id":6,"rotten_flag":true,"rotten_days":21,"add_time":"2022-02-12
+        17:46:01","update_time":"2022-02-16 13:24:24","pipeline_name":"Organic Pipe","pipeline_deal_probability":true},{"id":89,"order_nr":1,"name":"New","active_flag":true,"deal_probability":100,"pipeline_id":2,"rotten_flag":false,"rotten_days":null,"add_time":"2022-03-14
+        14:55:32","update_time":"2022-10-07 12:40:49","pipeline_name":"Gospring Pipe","pipeline_deal_probability":true},{"id":119,"order_nr":2,"name":"Contacted","active_flag":true,"deal_probability":100,"pipeline_id":2,"rotten_flag":false,"rotten_days":null,"add_time":"2022-10-07
+        12:40:06","update_time":"2022-10-07 12:40:49","pipeline_name":"Gospring Pipe","pipeline_deal_probability":true},{"id":120,"order_nr":3,"name":"In
+        touch","active_flag":true,"deal_probability":100,"pipeline_id":2,"rotten_flag":false,"rotten_days":null,"add_time":"2022-10-07
+        12:40:06","update_time":"2022-10-07 12:40:49","pipeline_name":"Gospring Pipe","pipeline_deal_probability":true},{"id":121,"order_nr":4,"name":"Doc
+        visit","active_flag":true,"deal_probability":100,"pipeline_id":2,"rotten_flag":false,"rotten_days":null,"add_time":"2022-10-07
+        12:40:49","update_time":"2022-10-07 12:40:49","pipeline_name":"Gospring Pipe","pipeline_deal_probability":true},{"id":87,"order_nr":5,"name":"Prescription","active_flag":true,"deal_probability":100,"pipeline_id":2,"rotten_flag":false,"rotten_days":null,"add_time":"2022-03-14
+        14:55:32","update_time":"2022-10-07 12:40:49","pipeline_name":"Gospring Pipe","pipeline_deal_probability":true},{"id":88,"order_nr":6,"name":"Therapy
+        started","active_flag":true,"deal_probability":100,"pipeline_id":2,"rotten_flag":false,"rotten_days":null,"add_time":"2022-03-14
+        14:55:32","update_time":"2022-10-07 12:40:49","pipeline_name":"Gospring Pipe","pipeline_deal_probability":true},{"id":118,"order_nr":1,"name":"New","active_flag":true,"deal_probability":100,"pipeline_id":13,"rotten_flag":false,"rotten_days":null,"add_time":"2022-09-08
+        12:23:26","update_time":"2022-09-08 12:23:26","pipeline_name":"No-touch Pipe","pipeline_deal_probability":true},{"id":116,"order_nr":2,"name":"Prescription","active_flag":true,"deal_probability":100,"pipeline_id":13,"rotten_flag":false,"rotten_days":null,"add_time":"2022-08-19
+        13:33:02","update_time":"2022-09-08 12:23:26","pipeline_name":"No-touch Pipe","pipeline_deal_probability":true},{"id":117,"order_nr":3,"name":"Therapy
+        started","active_flag":true,"deal_probability":100,"pipeline_id":13,"rotten_flag":false,"rotten_days":null,"add_time":"2022-08-19
+        13:33:02","update_time":"2022-09-08 12:23:26","pipeline_name":"No-touch Pipe","pipeline_deal_probability":true},{"id":101,"order_nr":1,"name":"Potential
+        Participant","active_flag":true,"deal_probability":100,"pipeline_id":10,"rotten_flag":false,"rotten_days":null,"add_time":"2022-05-05
+        12:48:04","update_time":"2022-12-06 13:16:52","pipeline_name":"UKM Study Pipe","pipeline_deal_probability":true},{"id":106,"order_nr":2,"name":"Kontaktiert","active_flag":true,"deal_probability":100,"pipeline_id":10,"rotten_flag":false,"rotten_days":null,"add_time":"2022-05-25
+        14:32:27","update_time":"2022-12-06 13:16:52","pipeline_name":"UKM Study Pipe","pipeline_deal_probability":true},{"id":98,"order_nr":3,"name":"Wants
+        to participate in study","active_flag":true,"deal_probability":100,"pipeline_id":10,"rotten_flag":false,"rotten_days":null,"add_time":"2022-05-05
+        12:23:36","update_time":"2022-12-06 13:16:52","pipeline_name":"UKM Study Pipe","pipeline_deal_probability":true},{"id":92,"order_nr":4,"name":"Lime
+        1 abgeschlossen","active_flag":true,"deal_probability":100,"pipeline_id":10,"rotten_flag":false,"rotten_days":null,"add_time":"2022-05-05
+        09:13:33","update_time":"2022-12-06 13:16:52","pipeline_name":"UKM Study Pipe","pipeline_deal_probability":true},{"id":107,"order_nr":5,"name":"Patientendaten
+        validiert","active_flag":true,"deal_probability":100,"pipeline_id":10,"rotten_flag":false,"rotten_days":null,"add_time":"2022-05-30
+        14:57:11","update_time":"2022-12-06 13:16:52","pipeline_name":"UKM Study Pipe","pipeline_deal_probability":true},{"id":97,"order_nr":6,"name":"Studienpaket
+        verschickt","active_flag":true,"deal_probability":100,"pipeline_id":10,"rotten_flag":false,"rotten_days":null,"add_time":"2022-05-05
+        12:23:36","update_time":"2022-12-06 13:16:52","pipeline_name":"UKM Study Pipe","pipeline_deal_probability":true},{"id":93,"order_nr":7,"name":"UKM
+        Aufkl\u00e4rung erfolgt","active_flag":true,"deal_probability":100,"pipeline_id":10,"rotten_flag":false,"rotten_days":null,"add_time":"2022-05-05
+        09:13:33","update_time":"2022-12-06 13:16:52","pipeline_name":"UKM Study Pipe","pipeline_deal_probability":true},{"id":94,"order_nr":8,"name":"1.
+        CRO Befragung abgeschlossen","active_flag":true,"deal_probability":100,"pipeline_id":10,"rotten_flag":false,"rotten_days":null,"add_time":"2022-05-05
+        09:13:33","update_time":"2022-12-06 13:16:52","pipeline_name":"UKM Study Pipe","pipeline_deal_probability":true},{"id":99,"order_nr":9,"name":"Therapy
+        started","active_flag":true,"deal_probability":100,"pipeline_id":10,"rotten_flag":false,"rotten_days":null,"add_time":"2022-05-05
+        12:23:36","update_time":"2022-12-06 13:16:52","pipeline_name":"UKM Study Pipe","pipeline_deal_probability":true},{"id":102,"order_nr":10,"name":"2.
+        CRO Befragung abgeschlossen","active_flag":true,"deal_probability":100,"pipeline_id":10,"rotten_flag":false,"rotten_days":null,"add_time":"2022-05-05
+        12:48:04","update_time":"2022-12-06 13:16:52","pipeline_name":"UKM Study Pipe","pipeline_deal_probability":true},{"id":104,"order_nr":11,"name":"Abschlussgespr\u00e4ch
+        gef\u00fchrt","active_flag":true,"deal_probability":100,"pipeline_id":10,"rotten_flag":false,"rotten_days":null,"add_time":"2022-05-05
+        12:48:04","update_time":"2022-12-06 13:16:52","pipeline_name":"UKM Study Pipe","pipeline_deal_probability":true},{"id":112,"order_nr":12,"name":"M\u00f6chte
+        Phase 2 Therapie","active_flag":true,"deal_probability":100,"pipeline_id":10,"rotten_flag":false,"rotten_days":null,"add_time":"2022-08-17
+        12:46:42","update_time":"2022-12-06 13:16:52","pipeline_name":"UKM Study Pipe","pipeline_deal_probability":true},{"id":111,"order_nr":13,"name":"Phase
+        2 Therapie gestartet","active_flag":true,"deal_probability":100,"pipeline_id":10,"rotten_flag":false,"rotten_days":null,"add_time":"2022-08-16
+        12:24:38","update_time":"2022-12-06 13:16:52","pipeline_name":"UKM Study Pipe","pipeline_deal_probability":true},{"id":113,"order_nr":14,"name":"Abschlussgespr\u00e4ch
+        Phase 2","active_flag":true,"deal_probability":100,"pipeline_id":10,"rotten_flag":false,"rotten_days":null,"add_time":"2022-08-17
+        12:46:42","update_time":"2022-12-06 13:16:52","pipeline_name":"UKM Study Pipe","pipeline_deal_probability":true},{"id":114,"order_nr":15,"name":"M\u00f6chte
+        Phase 3 Therapie","active_flag":true,"deal_probability":100,"pipeline_id":10,"rotten_flag":false,"rotten_days":null,"add_time":"2022-08-17
+        12:46:42","update_time":"2022-12-06 13:16:52","pipeline_name":"UKM Study Pipe","pipeline_deal_probability":true},{"id":115,"order_nr":16,"name":"Phase
+        3 Therapie gestartet","active_flag":true,"deal_probability":100,"pipeline_id":10,"rotten_flag":false,"rotten_days":null,"add_time":"2022-08-17
+        12:46:42","update_time":"2022-12-06 13:16:52","pipeline_name":"UKM Study Pipe","pipeline_deal_probability":true},{"id":122,"order_nr":17,"name":"4.
+        Befragung abgeschlossen","active_flag":true,"deal_probability":100,"pipeline_id":10,"rotten_flag":false,"rotten_days":null,"add_time":"2022-11-10
+        08:26:09","update_time":"2022-12-06 13:16:52","pipeline_name":"UKM Study Pipe","pipeline_deal_probability":true},{"id":123,"order_nr":18,"name":"M\u00f6chte
+        Phase 4 Therapie","active_flag":true,"deal_probability":100,"pipeline_id":10,"rotten_flag":false,"rotten_days":null,"add_time":"2022-11-10
+        08:38:06","update_time":"2022-12-06 13:16:52","pipeline_name":"UKM Study Pipe","pipeline_deal_probability":true},{"id":124,"order_nr":19,"name":"Phase
+        4 Therapie gestartet","active_flag":true,"deal_probability":100,"pipeline_id":10,"rotten_flag":false,"rotten_days":null,"add_time":"2022-11-10
+        08:38:06","update_time":"2022-12-06 13:16:52","pipeline_name":"UKM Study Pipe","pipeline_deal_probability":true},{"id":61,"order_nr":1,"name":"New","active_flag":true,"deal_probability":100,"pipeline_id":8,"rotten_flag":false,"rotten_days":null,"add_time":"2021-12-01
+        09:19:53","update_time":"2022-10-16 19:33:27","pipeline_name":"Partials\/CRM
+        Pipe","pipeline_deal_probability":true},{"id":85,"order_nr":2,"name":"Contacted","active_flag":true,"deal_probability":100,"pipeline_id":8,"rotten_flag":false,"rotten_days":null,"add_time":"2022-02-12
+        18:03:28","update_time":"2022-10-16 19:33:27","pipeline_name":"Partials\/CRM
+        Pipe","pipeline_deal_probability":true},{"id":62,"order_nr":3,"name":"In touch","active_flag":true,"deal_probability":100,"pipeline_id":8,"rotten_flag":false,"rotten_days":null,"add_time":"2021-12-01
+        09:19:53","update_time":"2022-10-16 19:33:27","pipeline_name":"Partials\/CRM
+        Pipe","pipeline_deal_probability":true},{"id":63,"order_nr":4,"name":"Doc
+        visit","active_flag":true,"deal_probability":100,"pipeline_id":8,"rotten_flag":false,"rotten_days":null,"add_time":"2021-12-01
+        09:19:53","update_time":"2022-10-16 19:33:27","pipeline_name":"Partials\/CRM
+        Pipe","pipeline_deal_probability":true},{"id":64,"order_nr":5,"name":"Prescription","active_flag":true,"deal_probability":100,"pipeline_id":8,"rotten_flag":false,"rotten_days":null,"add_time":"2021-12-01
+        09:19:53","update_time":"2022-10-16 19:33:27","pipeline_name":"Partials\/CRM
+        Pipe","pipeline_deal_probability":true},{"id":66,"order_nr":6,"name":"Therapy
+        started","active_flag":true,"deal_probability":100,"pipeline_id":8,"rotten_flag":true,"rotten_days":21,"add_time":"2021-12-01
+        09:19:53","update_time":"2022-10-16 19:33:27","pipeline_name":"Partials\/CRM
+        Pipe","pipeline_deal_probability":true},{"id":22,"order_nr":1,"name":"New","active_flag":true,"deal_probability":100,"pipeline_id":4,"rotten_flag":true,"rotten_days":1,"add_time":"2021-09-06
+        10:48:45","update_time":"2022-02-16 16:40:12","pipeline_name":"Test Pipe","pipeline_deal_probability":true},{"id":24,"order_nr":2,"name":"Contacted","active_flag":true,"deal_probability":100,"pipeline_id":4,"rotten_flag":true,"rotten_days":14,"add_time":"2021-09-06
+        10:48:45","update_time":"2022-02-16 16:40:12","pipeline_name":"Test Pipe","pipeline_deal_probability":true},{"id":25,"order_nr":3,"name":"In
+        touch","active_flag":true,"deal_probability":100,"pipeline_id":4,"rotten_flag":true,"rotten_days":10,"add_time":"2021-09-06
+        10:48:45","update_time":"2022-02-16 16:40:12","pipeline_name":"Test Pipe","pipeline_deal_probability":true},{"id":26,"order_nr":4,"name":"Doc
+        visit","active_flag":true,"deal_probability":100,"pipeline_id":4,"rotten_flag":true,"rotten_days":7,"add_time":"2021-09-06
+        10:48:45","update_time":"2022-02-16 16:40:12","pipeline_name":"Test Pipe","pipeline_deal_probability":true},{"id":27,"order_nr":5,"name":"Prescription","active_flag":true,"deal_probability":100,"pipeline_id":4,"rotten_flag":true,"rotten_days":2,"add_time":"2021-09-06
+        14:48:54","update_time":"2022-02-16 16:40:12","pipeline_name":"Test Pipe","pipeline_deal_probability":true},{"id":29,"order_nr":6,"name":"Therapy
+        started","active_flag":true,"deal_probability":100,"pipeline_id":4,"rotten_flag":false,"rotten_days":null,"add_time":"2021-09-06
+        14:48:54","update_time":"2022-02-16 16:40:12","pipeline_name":"Test Pipe","pipeline_deal_probability":true},{"id":105,"order_nr":1,"name":"Therapy
+        started","active_flag":true,"deal_probability":100,"pipeline_id":11,"rotten_flag":false,"rotten_days":null,"add_time":"2022-05-05
+        13:50:36","update_time":"2022-05-05 13:50:36","pipeline_name":"EDERA edge
+        cases","pipeline_deal_probability":true},{"id":108,"order_nr":1,"name":"New","active_flag":true,"deal_probability":100,"pipeline_id":12,"rotten_flag":false,"rotten_days":null,"add_time":"2022-06-07
+        09:29:02","update_time":"2022-12-12 11:36:24","pipeline_name":"Gospring testing
+        pipe","pipeline_deal_probability":true},{"id":109,"order_nr":2,"name":"In
+        touch","active_flag":true,"deal_probability":100,"pipeline_id":12,"rotten_flag":false,"rotten_days":null,"add_time":"2022-06-07
+        09:29:02","update_time":"2022-12-12 11:36:24","pipeline_name":"Gospring testing
+        pipe","pipeline_deal_probability":true},{"id":110,"order_nr":3,"name":"Appointment","active_flag":true,"deal_probability":100,"pipeline_id":12,"rotten_flag":false,"rotten_days":null,"add_time":"2022-06-07
+        09:29:02","update_time":"2022-12-12 11:36:24","pipeline_name":"Gospring testing
+        pipe","pipeline_deal_probability":true},{"id":125,"order_nr":4,"name":"Prescription","active_flag":true,"deal_probability":100,"pipeline_id":12,"rotten_flag":false,"rotten_days":null,"add_time":"2022-12-12
+        11:30:05","update_time":"2022-12-12 11:36:24","pipeline_name":"Gospring testing
+        pipe","pipeline_deal_probability":true},{"id":126,"order_nr":5,"name":"Therapy
+        started","active_flag":true,"deal_probability":100,"pipeline_id":12,"rotten_flag":false,"rotten_days":null,"add_time":"2022-12-12
+        11:30:05","update_time":"2022-12-12 11:36:24","pipeline_name":"Gospring testing
+        pipe","pipeline_deal_probability":true},{"id":127,"order_nr":1,"name":"Therapy
+        started","active_flag":true,"deal_probability":100,"pipeline_id":14,"rotten_flag":false,"rotten_days":null,"add_time":"2022-12-12
+        11:36:58","update_time":"2022-12-12 12:04:06","pipeline_name":"Patient Care
+        Pipe","pipeline_deal_probability":true},{"id":128,"order_nr":2,"name":"In
+        touch","active_flag":true,"deal_probability":100,"pipeline_id":14,"rotten_flag":false,"rotten_days":null,"add_time":"2022-12-12
+        11:36:58","update_time":"2022-12-12 12:04:06","pipeline_name":"Patient Care
+        Pipe","pipeline_deal_probability":true},{"id":129,"order_nr":3,"name":"Doc
+        visit","active_flag":true,"deal_probability":100,"pipeline_id":14,"rotten_flag":false,"rotten_days":null,"add_time":"2022-12-12
+        11:36:58","update_time":"2022-12-12 12:04:06","pipeline_name":"Patient Care
+        Pipe","pipeline_deal_probability":true},{"id":130,"order_nr":4,"name":"Prescription","active_flag":true,"deal_probability":100,"pipeline_id":14,"rotten_flag":false,"rotten_days":null,"add_time":"2022-12-12
+        11:36:58","update_time":"2022-12-12 12:04:06","pipeline_name":"Patient Care
+        Pipe","pipeline_deal_probability":true},{"id":131,"order_nr":5,"name":"Resub
+        started","active_flag":true,"deal_probability":100,"pipeline_id":14,"rotten_flag":false,"rotten_days":null,"add_time":"2022-12-12
+        11:36:58","update_time":"2022-12-12 12:04:06","pipeline_name":"Patient Care
+        Pipe","pipeline_deal_probability":true}]}'
+    headers:
+      Access-Control-Allow-Origin:
+      - '*'
+      Access-Control-Expose-Headers:
+      - X-RateLimit-Remaining, X-RateLimit-Limit, X-RateLimit-Reset
+      CF-Cache-Status:
+      - DYNAMIC
+      CF-Ray:
+      - 77922a0c78b2d22c-SOF
+      Cache-Control:
+      - no-cache
+      Connection:
+      - keep-alive
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 13 Dec 2022 22:33:56 GMT
+      Server:
+      - cloudflare
+      Set-Cookie:
+      - __cf_bm=j2OqFD2WlewpRyu8Cj990eVdYuFsGpUWZYISTISdGIk-1670970836-0-AR9mvIWxd1ZICdfR5vAOxVZ+IMFiL8/FjNndBMUsRzMrfWxH8bEzpQjBzMh8Ch9Tpus+b0yySzW+P6HPmWRzLC0=;
+        path=/; expires=Tue, 13-Dec-22 23:03:56 GMT; domain=.pipedrive.com; HttpOnly;
+        Secure; SameSite=None
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains
+      Transfer-Encoding:
+      - chunked
+      Vary:
+      - Accept-Encoding
+      X-RateLimit-Limit:
+      - '80'
+      X-RateLimit-Remaining:
+      - '79'
+      X-RateLimit-Reset:
+      - '2'
+      X-XSS-Protection:
+      - 1; mode=block
+      alt-svc:
+      - h3=":443"; ma=86400, h3-29=":443"; ma=86400
+      badi:
+      - 'Routing: eu-central-1=>eu-central-1; Version: 9ab5; Host: bari;'
+      content-length:
+      - '19244'
+      x-content-type-options:
+      - nosniff
+      x-correlation-id:
+      - 25a9da41-edf2-4d3b-bb35-a9259b3cc72b
+      x-frame-options:
+      - SAMEORIGIN
+    status:
+      code: 200
+      message: OK
+version: 1

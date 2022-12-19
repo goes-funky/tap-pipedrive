@@ -353,6 +353,7 @@ class PipedriveTap(object):
         }
         _params = {
             'api_token': self.config['api_token'],
+            'sort': "id ASC"
         }
         if params:
             _params.update(params)
@@ -360,7 +361,7 @@ class PipedriveTap(object):
         url = "{}/{}".format(BASE_URL, endpoint)
         logger.debug('Firing request at {} with params: {}'.format(url, _params))
         session = requests.Session()
-        # session.proxies = {"https": "http://localhost:8000"}
+        # session.proxies = {"https": "http://localhost:8866"}
         # session.verify = False
         response = session.get(url, headers=headers, params=_params)
 
