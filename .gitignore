@@ -57,6 +57,9 @@ docs/_build/
 # Jetbrain's IDEA
 .idea/
 
+# Sphinx Documents
+docs/_build/
+
 # PyBuilder
 target/
 

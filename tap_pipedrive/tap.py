@@ -343,7 +343,7 @@ class PipedriveTap(object):
         return self.execute_request(stream.endpoint, params=params)
 
     @backoff.on_exception(backoff.expo, (
-            PipedriveInternalServiceError, simplejson.scanner.JSONDecodeError, RetryOnNullResponseException, RetryOnGetawayTimeoutResponseException),
+            PipedriveInternalServiceError, simplejson.scanner.JSONDecodeError, RetryOnNullResponseException, RetryOnGetawayTimeoutResponseException, requests.ConnectionError),
                           max_tries=10)
     @backoff.on_exception(retry_after_wait_gen, PipedriveTooManyRequestsInSecondError,
                           giveup=is_not_status_code_fn([429]), jitter=None, max_tries=10)
@@ -353,6 +353,7 @@ class PipedriveTap(object):
         }
         _params = {
             'api_token': self.config['api_token'],
+            'sort': "id ASC"
         }
         if params:
             _params.update(params)
@@ -360,7 +361,7 @@ class PipedriveTap(object):
         url = "{}/{}".format(BASE_URL, endpoint)
         logger.debug('Firing request at {} with params: {}'.format(url, _params))
         session = requests.Session()
-        # session.proxies = {"https": "http://localhost:8000"}
+        # session.proxies = {"https": "http://localhost:8866"}
         # session.verify = False
         response = session.get(url, headers=headers, params=_params)
 

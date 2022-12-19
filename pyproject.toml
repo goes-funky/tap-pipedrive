@@ -1,0 +1,37 @@
+[tool.black]
+line-length = 120
+
+[tool.flake8]
+max-line-length = 120
+extend-ignore = "E203"
+
+[tool.poetry]
+name = "tap-pipedrive"
+version = "0.0.1"
+description = "Pipedrive tap"
+authors = ["y42 developers <info@y42.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.8,<4.0"
+pendulum= "^2.1.2"
+requests ="^2.21.0"
+singer-python="^5.4.1"
+
+[tool.poetry.dev-dependencies]
+integrations-testing-framework = {git = "http://github.com/goes-funky/integrations-testing-framework.git"}
+pytest = "^7.1.2"
+coverage = "^6.4.4"
+pytest-cov = "^3.0.0"
+bandit = "^1.7.4"
+
+[tool.poetry.scripts]
+tap-pipedrive = "tap_pipedrive:main"
+
+[tool.pytest.ini_options]
+testpaths = [
+    "tests"
+]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
