@@ -327,7 +327,9 @@ class PipedriveTap(object):
 
     def iterate_response(self, response):
         payload = response.json()
-        if payload['data'] is None:
+        if payload is None:
+            return []
+        elif payload['data'] is None:
             return []
         else:
             if type(payload['data']) is dict:
@@ -366,8 +368,8 @@ class PipedriveTap(object):
         response = session.get(url, headers=headers, params=_params)
 
         if response.status_code == 200 and isinstance(response, requests.Response):
-            if response.text == "null":
-                raise RetryOnNullResponseException
+            if response.json() is None:
+                pass
             try:
                 # Verifying json is valid or not
                 response.json()
@@ -380,7 +382,9 @@ class PipedriveTap(object):
     def validate_response(self, response):
         try:
             payload = response.json()
-            if payload['success'] and 'data' in payload:
+            if payload is None:
+                pass
+            elif payload['success'] and 'data' in payload:
                 return True
         except (AttributeError, simplejson.scanner.JSONDecodeError):  # Verifying response in execute_request
             pass

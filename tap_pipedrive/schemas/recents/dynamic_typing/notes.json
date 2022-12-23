@@ -65,7 +65,7 @@
       "type": ["null", "object"],
       "properties": {
         "title": {
-          "type": "string"
+          "type": ["null","string"]
         }
       }
     },

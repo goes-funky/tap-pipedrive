@@ -73,7 +73,9 @@ class PipedriveStream(object):
     def paginate(self, response):
         payload = response.json()
 
-        if 'additional_data' in payload and 'pagination' in payload['additional_data']:
+        if payload is None:
+            self.more_items_in_collection = False
+        elif 'additional_data' in payload and 'pagination' in payload['additional_data']:
             logger.debug('Paginate: valid response')
             pagination = payload['additional_data']['pagination']
             if 'more_items_in_collection' in pagination:
@@ -85,7 +87,7 @@ class PipedriveStream(object):
         else:
             self.more_items_in_collection = False
 
-        if self.more_items_in_collection:
+        if self.more_items_in_collection == True:
             logger.debug('Stream {} has more data starting at {}'.format(self.schema, self.start))
         else:
             logger.debug('Stream {} has no more data'.format(self.schema))
