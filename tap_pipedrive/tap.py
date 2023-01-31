@@ -355,7 +355,6 @@ class PipedriveTap(object):
         }
         _params = {
             'api_token': self.config['api_token'],
-            'sort': "id ASC"
         }
         if params:
             _params.update(params)
