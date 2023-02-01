@@ -4,11 +4,10 @@ from tap_pipedrive.stream import PipedriveIterStream
 
 class DealStageChangeStream(PipedriveIterStream):
     base_endpoint = 'deals'
-    id_endpoint = 'deals/{0}/flow'
+    id_endpoint = 'deals/{0}/flow?items=dealChange'
     schema = 'dealflow'
     state_field = 'log_time'
     key_properties = ['id', ]
-
     def get_name(self):
         return self.schema
 
