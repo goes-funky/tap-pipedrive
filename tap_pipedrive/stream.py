@@ -20,8 +20,8 @@ class PipedriveStream(object):
     schema_custom_fields = {}
 
     start = 0
-    limit = 300
-    next_start = 300
+    limit = 500
+    next_start = 500
     more_items_in_collection = True
 
     id_list = False
